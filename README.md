@@ -60,27 +60,27 @@
   
    - Get Products (GET)
    
-   - URL : http://localhost:8090/products
+   - URL : http://localhost:8090/v1/products
    
    
    - Get Orders (GET)
    
-   - URL : http://localhost:8090/orders
+   - URL : http://localhost:8090/v1/orders
    
    
    - Get 1 order (GET)
    
-   - URL : http://localhost:8090/order/PUT_ORDER_NUMBER_HERE
+   - URL : http://localhost:8090/v1/order/PUT_ORDER_NUMBER_HERE
    
    
    - Get Status (GET)
    
-   - URL : http://localhost:8090/order/status/PUT_ORDER_NUMBER_HERE
+   - URL : http://localhost:8090/v1/order/status/PUT_ORDER_NUMBER_HERE
  
    
    - Creating a Order (POST)
    
-   - URL : http://localhost:8090/order 
+   - URL : http://localhost:8090/v1/order 
    
    {
     "clientName": "Renato Pires",
@@ -92,7 +92,7 @@
    
    - Cancel the Order (PUT)
    
-   - URL : http://localhost:8090/order/PUT_ORDER_NUMBER_HERE
+   - URL : http://localhost:8090/v1/order/PUT_ORDER_NUMBER_HERE
    
    
 
