@@ -1,19 +1,16 @@
 package com.vanhack.api;
 
-import javax.swing.plaf.synth.SynthSeparatorUI;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.r2d2apps.api.entities.Empresa;
-import com.vanhack.api.entitites.Product;
+import com.vanhack.api.entities.Product;
 import com.vanhack.api.repositories.ProductRepository;
 import com.vanhack.api.security.entities.Usuario;
-import com.vanhack.api.security.repositories.UsuarioRepository;
 import com.vanhack.api.security.enums.PerfilEnum;
+import com.vanhack.api.security.repositories.UsuarioRepository;
 import com.vanhack.api.utils.SenhaUtils;
 
 @SpringBootApplication
@@ -36,6 +33,7 @@ public class VanhackProjectApplication {
 	public CommandLineRunner commandLinerRunner() {
 		return args -> {
 			
+			
 			// Creating a users default
 			Usuario usuario = new Usuario();
 			usuario.setEmail("user@email.com");
@@ -50,7 +48,7 @@ public class VanhackProjectApplication {
 			this.usuarioRepository.save(admin);
 			
 			
-			/*
+			
 			// Creating a products Default
 			Product product1 = new Product();
 			product1.setName("Italian Pizza");
@@ -71,7 +69,7 @@ public class VanhackProjectApplication {
 				.findAll()
 				.stream()
 				.forEach(c -> System.out.println("Product " + c.getName()));
-			*/
+			
 			
 			
 		};

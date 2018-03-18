@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vanhack.api.entitites.Product;
+import com.vanhack.api.entities.Product;
+import com.vanhack.api.repositories.ProductRepository;
 import com.vanhack.api.responses.Response;
 import com.vanhack.api.services.ProductService;
 
@@ -17,19 +18,23 @@ import com.vanhack.api.services.ProductService;
 public class ProductController {
 	
 	@Autowired
-	ProductService productService;
+	private ProductService productService;
 	
-	/*
+   
 	@GetMapping("/aqui")
 	public String teste() {
 		return "{ret=1}";
 	}
 	
 	@GetMapping("/products")
-	public ResponseEntity<Response<List <Product>>> listAll(){
-		//return ResponseEntity.ok( new Response<List<Product>> (this.productService.listAll()) );
-		return null ;
+	public ResponseEntity<List <Product>> listAll(){
+		return ResponseEntity.ok( this.productService.listAll() );
+		//return null ;
 	}
-	*/
 
 }
+
+
+
+
+

@@ -2,9 +2,11 @@ package com.vanhack.api.services;
 
 import java.util.List;
 
-import com.vanhack.api.entitites.Product;
+import org.springframework.stereotype.Service;
 
+import com.vanhack.api.entities.Product;
 
+@Service
 public interface ProductService {
 
 	List<Product> listAll();

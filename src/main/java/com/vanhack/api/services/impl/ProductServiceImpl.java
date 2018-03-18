@@ -1,14 +1,16 @@
-package com.vanhack.api.services.implementations;
+package com.vanhack.api.services.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.vanhack.api.entitites.Product;
+import com.vanhack.api.entities.Product;
 import com.vanhack.api.repositories.ProductRepository;
 import com.vanhack.api.services.ProductService;
 
-public class ProductServicelmplementation implements ProductService {
+@Service
+public class ProductServiceImpl implements ProductService {
 	
 	
 	@Autowired
