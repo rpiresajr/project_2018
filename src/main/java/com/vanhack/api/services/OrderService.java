@@ -16,7 +16,7 @@ public interface OrderService {
 	List<Order> listAll();
 	
 	Order createOrder(Order order);
-	void cancel(Long id);
+	String cancel(Long id);
 
 	
 }

@@ -18,8 +18,8 @@ public class OrderServiceImpl implements OrderService{
 	@Override
 	public String findStatus(Long id) {
 		// TODO Auto-generated method stub
-		this.orderRepository.findOne(id).getStatus();
-		return null;
+		
+		return this.orderRepository.findOne(id).getStatus();
 	}
 	
 	@Override
@@ -39,13 +39,16 @@ public class OrderServiceImpl implements OrderService{
 	public Order createOrder(Order order) {
 		// TODO Auto-generated method stub
 		this.orderRepository.save(order);
-		return null;
+		return order;
 	}
 
 	@Override
-	public void cancel(Long id) {
+	public String cancel(Long id) {
 		// TODO Auto-generated method stub
-		this.orderRepository.findOne(id).setStatus("Canceled");
+		Order order = this.orderRepository.findOne(id);
+		order.setStatus("Canceled");
+		this.orderRepository.save(order);
+		return "Order Canceled \n" +order.toString() ; 
 	}
 
 }
