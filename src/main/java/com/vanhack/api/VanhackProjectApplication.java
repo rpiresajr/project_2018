@@ -1,12 +1,16 @@
 package com.vanhack.api;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.vanhack.api.entities.Order;
 import com.vanhack.api.entities.Product;
+import com.vanhack.api.repositories.OrderRepository;
 import com.vanhack.api.repositories.ProductRepository;
 import com.vanhack.api.security.entities.Usuario;
 import com.vanhack.api.security.enums.PerfilEnum;
@@ -23,6 +27,8 @@ public class VanhackProjectApplication {
 	@Autowired
 	ProductRepository productRepository;
 	
+	@Autowired
+	OrderRepository orderRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(VanhackProjectApplication.class, args);
@@ -69,6 +75,18 @@ public class VanhackProjectApplication {
 				.findAll()
 				.stream()
 				.forEach(c -> System.out.println("Product " + c.getName()));
+			
+			// Creating a Orders default
+			
+			Date dtOrder = new Date();
+			
+			Order order1 = new Order();
+			order1.setClientName("Vanhack Team");
+			order1.setDateOrder(dtOrder);
+			order1.setStatus("Submitted");
+			order1.setListProducts("1 Italian Pizza, 2 cokes");
+			
+			orderRepository.save(order1);
 			
 			
 			

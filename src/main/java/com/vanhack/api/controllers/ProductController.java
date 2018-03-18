@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vanhack.api.entities.Product;
-import com.vanhack.api.repositories.ProductRepository;
-import com.vanhack.api.responses.Response;
 import com.vanhack.api.services.ProductService;
 
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/v1/products")
 public class ProductController {
 	
 	@Autowired
@@ -25,9 +23,10 @@ public class ProductController {
 	public String teste() {
 		return "{ret=1}";
 	}
-	
-	@GetMapping("/products")
+	 
+	@GetMapping
 	public ResponseEntity<List <Product>> listAll(){
+		
 		return ResponseEntity.ok( this.productService.listAll() );
 		//return null ;
 	}

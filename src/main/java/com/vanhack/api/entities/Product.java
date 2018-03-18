@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="product")
 public class Product implements Serializable {
@@ -33,6 +34,7 @@ public class Product implements Serializable {
 	
 	@Column(name="value", nullable = false )
 	private float value;
+	
 	
 	public Product() {
 		
