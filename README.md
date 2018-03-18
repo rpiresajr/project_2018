@@ -62,18 +62,22 @@
    
    - URL : http://localhost:8090/products
    
+   
    - Get Orders (GET)
    
    - URL : http://localhost:8090/orders
    
+   
    - Get 1 order (GET)
    
-   - URL : http://localhost:8090/order/<NUMBER>
+   - URL : http://localhost:8090/order/:ORDER_NUMBER:
+   
    
    - Get Status (GET)
    
-   - URL : http://localhost:8090/order/status/<NUMBER>
+   - URL : http://localhost:8090/order/status/:ORDER_NUMBER:
  
+   
    - Creating a Order (POST)
    
    - URL : http://localhost:8090/order 
@@ -85,16 +89,11 @@
     "dateOrder": 1521399623285
    }
    
+   
    - Cancel the Order (PUT)
    
-   - URL : http://localhost:8090/order/<NUMBER> 
+   - URL : http://localhost:8090/order/:ORDER_NUMBER: 
    
    
 
-
-   
-   
-   
-  
-  
 
