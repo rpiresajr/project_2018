@@ -2,7 +2,17 @@
 
 
 # Hackthon 2018 - Vanhack
- Projeto utilizado no Hackthon da Vanhack
+ Project for Hackthon da Vanhack 2018.
+ 
+ Using:
+     
+     Spring Boot (Version 1.5.10)
+     
+     Java 8
+     
+     JPA ( To use any database )
+ 
+ 
  
  Build an API to:
  
