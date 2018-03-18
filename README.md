@@ -70,12 +70,12 @@
    
    - Get 1 order (GET)
    
-   - URL : http://localhost:8090/order/:ORDER_NUMBER:
+   - URL : http://localhost:8090/order/PUT_ORDER_NUMBER_HERE
    
    
    - Get Status (GET)
    
-   - URL : http://localhost:8090/order/status/:ORDER_NUMBER:
+   - URL : http://localhost:8090/order/status/PUT_ORDER_NUMBER_HERE
  
    
    - Creating a Order (POST)
@@ -92,7 +92,7 @@
    
    - Cancel the Order (PUT)
    
-   - URL : http://localhost:8090/order/:ORDER_NUMBER: 
+   - URL : http://localhost:8090/order/PUT_ORDER_NUMBER_HERE
    
    
 
