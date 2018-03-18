@@ -26,7 +26,7 @@ public class Order implements Serializable {
 	@Column(name="client_name" , nullable = false )
 	private String clientName;
 	
-	@Column(name="status" , nullable = true ) 
+	@Column(name="status" , nullable = false ) 
 	private String status;
 	
 	

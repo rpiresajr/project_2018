@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vanhack.api.entities.Product;
+import com.vanhack.api.responses.Response;
 import com.vanhack.api.services.ProductService;
 
 @RestController
@@ -23,9 +24,9 @@ public class ProductController {
 	}
 	 
 	@GetMapping
-	public ResponseEntity<List <Product>> listAll(){
+	public ResponseEntity<Response <List <Product>>> listAll(){
 		
-		return ResponseEntity.ok( this.productService.listAll() );
+		return ResponseEntity.ok( new Response<List<Product>> ( this.productService.listAll() ) );
 		//return null ;
 	}
 
