@@ -2,7 +2,7 @@
 
 
 # Hackthon 2018 - Vanhack
- Project for Hackthon da Vanhack 2018.
+ Project for Hackthon of Vanhack 2018.
  
  Using:
      
@@ -11,6 +11,10 @@
      Java 8
      
      JPA ( To use any database )
+     
+     Swagger2
+     
+     Travis CI
  
  
  
