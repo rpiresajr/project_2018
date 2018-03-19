@@ -104,7 +104,7 @@
    }
    
    
-   - Cancel the Order (PUT)
+   - Cancel the Order (DELETE)
    
    - URL : http://localhost:8090/v1/order/PUT_ORDER_NUMBER_HERE
    
