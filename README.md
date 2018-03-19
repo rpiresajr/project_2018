@@ -70,7 +70,7 @@
 
   - Method: POST
   
-  ## 3 getting information
+  ## 3 getting information ( add to header: Content-Type: application/json  [and] Authorization: Bearer TOKEN )
   
    - Get Products (GET)
    
